@@ -1,3 +1,8 @@
+# LaTeX style suitable for bioRxiv submissions
+
+This is a fork of the **arxiv-style** LaTeX style file developed by **kourgeorge** with some modifications I made for bioRxiv submissions (and for my own personal taste). There is no official relationship with bioRxiv. This repository is merely a convenient method for sharing my own solution.
+
+# Original readme.md from kourgeorge/arxiv-style below
 
 ## Description:
 
