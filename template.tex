@@ -1,8 +1,6 @@
 \documentclass{article}
 
-
-
-\usepackage{arxiv}
+\usepackage{biorxiv} % github.com/alexsbaldwin/biorxiv-inspired-latex-style
 
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
@@ -13,10 +11,11 @@
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 \usepackage{lipsum}		% Can be removed after putting your text content
+\usepackage{lineno}
 
+\linenumbers
 
-
-\title{A template for the \emph{arxiv} style}
+\title{A template for \textbf{\textup{bio\textcolor{biorxivred}{R}$\chi$iv}} submissions}
 
 %\date{September 9, 1985}	% Here you can change the date presented in the paper title
 %\date{} 					% Or removing it
@@ -53,9 +52,6 @@
   %% \texttt{email} \\
 }
 
-% Uncomment to remove the date
-% \date{}
-
 % Uncomment to override  the `A preprint' in the header
 %\renewcommand{\headeright}{}
 
@@ -66,15 +62,12 @@
 \lipsum[1]
 \end{abstract}
 
-
 % keywords can be removed
 \keywords{First keyword \and Second keyword \and More}
-
 
 \section{Introduction}
 \lipsum[2]
 \lipsum[3]
-
 
 \section{Headings: first level}
 \label{sec:headings}
@@ -95,26 +88,7 @@
 
 \section{Examples of citations, figures, tables, references}
 \label{sec:others}
-\lipsum[8] \cite{kour2014real,kour2014fast} and see \cite{hadash2018estimate}.
-
-The documentation for \verb+natbib+ may be found at
-\begin{center}
-  \url{http://mirrors.ctan.org/macros/latex/contrib/natbib/natnotes.pdf}
-\end{center}
-Of note is the command \verb+\citet+, which produces citations
-appropriate for use in inline text.  For example,
-\begin{verbatim}
-   \citet{hasselmo} investigated\dots
-\end{verbatim}
-produces
-\begin{quote}
-  Hasselmo, et al.\ (1995) investigated\dots
-\end{quote}
-
-\begin{center}
-  \url{https://www.ctan.org/pkg/booktabs}
-\end{center}
-
+We can cite in parentheses \citep{Tanner1954,Peterson1954} or directly: \cite{Gregory1955}.
 
 \subsection{Figures}
 \lipsum[10] 
@@ -156,35 +130,7 @@ See awesome Table~\ref{tab:table}.
 \item Aliquam dignissim blandit est, in dictum tortor gravida eget. In ac rutrum magna.
 \end{itemize}
 
-
-\bibliographystyle{unsrt}  
-%\bibliography{references}  %%% Remove comment to use the external .bib file (using bibtex).
-%%% and comment out the ``thebibliography'' section.
-
-
-%%% Comment out this section when you \bibliography{references} is enabled.
-\begin{thebibliography}{1}
-
-\bibitem{kour2014real}
-George Kour and Raid Saabne.
-\newblock Real-time segmentation of on-line handwritten arabic script.
-\newblock In {\em Frontiers in Handwriting Recognition (ICFHR), 2014 14th
-  International Conference on}, pages 417--422. IEEE, 2014.
-
-\bibitem{kour2014fast}
-George Kour and Raid Saabne.
-\newblock Fast classification of handwritten on-line arabic characters.
-\newblock In {\em Soft Computing and Pattern Recognition (SoCPaR), 2014 6th
-  International Conference of}, pages 312--318. IEEE, 2014.
-
-\bibitem{hadash2018estimate}
-Guy Hadash, Einat Kermany, Boaz Carmeli, Ofer Lavi, George Kour, and Alon
-  Jacovi.
-\newblock Estimate and replace: A novel approach to integrating deep neural
-  networks with existing applications.
-\newblock {\em arXiv preprint arXiv:1804.09028}, 2018.
-
-\end{thebibliography}
-
+\bibliographystyle{apalike}  
+\bibliography{references}  % uses external references.bib file
 
 \end{document}
